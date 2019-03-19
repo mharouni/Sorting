@@ -1,12 +1,13 @@
 #MergeSort
-import random
-def merge(Arr=[19,29,17,2,4,3,100,1]):
+import time
+def sort(Arr=[19,29,17,2,4,3,100,1]):
+	#start = time.time()
 	if len(Arr)>1:
 		mid = len(Arr)//2
 		L= Arr[:mid]
 		R = Arr[mid:]
-		merge(L)
-		merge(R)
+		sort(L)
+		sort(R)
 		i = j = k = 0
 		
 		while i < len(L) and j < len(R):
@@ -29,11 +30,13 @@ def merge(Arr=[19,29,17,2,4,3,100,1]):
 			Arr[k] = R[j]
 			j+=1
 			k+=1
+#end = time.time()
+#print(end - start)
+	return Arr
 
-
+"""
 a = []
 for c in range (10000000):
 	a.append(random.randint(0, 100000000))
-
-
 merge(a)
+"""
