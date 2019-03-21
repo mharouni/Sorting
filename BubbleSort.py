@@ -2,10 +2,10 @@
 import time
 def sort(Arr=[10,1,2,4,5,7,4]):
 	start = time.time()
-	n= len(Arr)
+	n= len(Arr)-1
 	c=0
 	for i in range (n,0,-1):
-		for j in range(0,i-1):
+		for j in range(0,i):
 			if Arr[j] > Arr[j+1]:
 				Arr[j],Arr[j+1]=Arr[j+1],Arr[j]
 	end = time.time()
