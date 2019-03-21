@@ -4,14 +4,13 @@ def sort(Arr=[10,1,2,4,5,7,4]):
 	start = time.time()
 	n= len(Arr)
 	c=0
-	for i in range (0,n):
-		for j in range(0,n-i-1):
-			c=c+1
+	for i in range (n,0,-1):
+		for j in range(0,i-1):
 			if Arr[j] > Arr[j+1]:
 				Arr[j],Arr[j+1]=Arr[j+1],Arr[j]
 	end = time.time()
 	print("BubbleSort: "+str(end - start))
 	return Arr
 		
-#Bubble()
+print(sort([10,9,8,7,6,5,4,3,2,1,-1,-2,-3,-4]))
 
