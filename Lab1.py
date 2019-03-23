@@ -5,8 +5,9 @@ import QuickSort
 import MergeSort
 import SelectionSort
 import InsertionSort
+import heaps
 import time
-n = input("Enter data set size: ")
+n = 200
 a= RandomArray.Gen(n)
 start = time.time()
 QuickSort.sort(a, 0, n-1)
@@ -17,6 +18,8 @@ start = time.time()
 MergeSort.sort(a)
 end = time.time()
 print("MergeSort: "+str(end - start))
+a= RandomArray.Gen(n)
+heaps.Sort(a)
 a= RandomArray.Gen(n)
 BubbleSort.sort(a)
 a= RandomArray.Gen(n)
