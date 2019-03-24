@@ -7,7 +7,7 @@ import SelectionSort
 import InsertionSort
 import heaps
 import time
-n = 200
+n = 10000
 a= RandomArray.Gen(n)
 start = time.time()
 QuickSort.sort(a, 0, n-1)
@@ -19,7 +19,8 @@ MergeSort.sort(a)
 end = time.time()
 print("MergeSort: "+str(end - start))
 a= RandomArray.Gen(n)
-heaps.Sort(a)
+ma = heaps.buildMaxHeap(a)
+heaps.Sort(ma)
 a= RandomArray.Gen(n)
 BubbleSort.sort(a)
 a= RandomArray.Gen(n)
